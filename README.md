@@ -4,6 +4,10 @@ Classifiez automatiquement des biens de consommation
 
 # Classification des Articles et Extraction de Données - Place de Marché
 
+## Aperçu de l'entreprise
+
+![Aperçu du site web](images/DS_projet6.PNG)
+
 ## Contexte
 
 Je suis Data Scientist au sein de **"Place de Marché"**, une entreprise souhaitant lancer une marketplace e-commerce. Actuellement, la catégorisation des articles sur la plateforme est effectuée manuellement par les vendeurs, ce qui est inefficace et peu fiable. Mon rôle est d'explorer la faisabilité de l'automatisation de cette tâche en utilisant des descriptions textuelles et des images pour classifier les articles en différentes catégories. Par la suite, je mènerai également des tests sur l'intégration d'une API pour extraire des données de produits.
