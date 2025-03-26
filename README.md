@@ -1,119 +1,114 @@
-# OPC_DATA_SCIENTIST_PROJET6
-Classifiez automatiquement des biens de consommation
-
-
-# Classification des Articles et Extraction de Données - Place de Marché
-
 ## Aperçu de l'entreprise
 
 ![Aperçu du site web](images/DS_projet6.PNG)
 
-## Contexte
+## 📌 Contexte professionnel
 
-Je suis Data Scientist au sein de **"Place de Marché"**, une entreprise souhaitant lancer une marketplace e-commerce. Actuellement, la catégorisation des articles sur la plateforme est effectuée manuellement par les vendeurs, ce qui est inefficace et peu fiable. Mon rôle est d'explorer la faisabilité de l'automatisation de cette tâche en utilisant des descriptions textuelles et des images pour classifier les articles en différentes catégories. Par la suite, je mènerai également des tests sur l'intégration d'une API pour extraire des données de produits.
+En tant que **Data Scientist** chez **Place de Marché**, j’ai été missionné pour étudier la faisabilité de l’automatisation de la **catégorisation des articles** à partir de leurs **descriptions textuelles** et **images**, afin de remplacer un processus manuel chronophage et peu fiable.
 
-Ce projet est divisé en deux missions principales : 
-1. Une étude de faisabilité pour l'automatisation de la classification des articles.
-2. La mise en place d'une classification supervisée des images et l'intégration d'une API pour récupérer des données de produits spécifiques.
-
----
-
-## Première Mission : Étude de Faisabilité pour la Classification Automatique
-
-L’objectif est de démontrer la faisabilité d’un moteur de classification des articles en utilisant des approches basées sur le traitement de texte et d'image. L’étude couvre l’extraction de features, la réduction de dimension, et la segmentation des données en clusters pour identifier les catégories de produits.
-
-### Étape 1 : Étude de faisabilité en utilisant des méthodes NLP basiques
-
-- **Objectif** : Prétraiter les descriptions textuelles des articles et utiliser des méthodes basiques d'encodage pour évaluer la faisabilité de regrouper les articles par catégorie.
-- **Détails** :
-  - Prétraiter les textes : nettoyage, suppression des stopwords, lemmatisation, etc.
-  - Utiliser des méthodes basiques d'encodage des textes : **Bag of Words**, **Tf-idf**.
-  - Réduire la dimensionnalité à l’aide de **PCA** ou **t-SNE** et comparer les résultats avec les catégories réelles.
-- **Livrable** : Un notebook montrant le prétraitement des textes et les résultats obtenus avec des méthodes d'encodage basiques.
-
-### Étape 2 : Étude de faisabilité avec des méthodes NLP avancées
-
-- **Objectif** : Utiliser des techniques d'embedding plus avancées pour voir si les résultats s'améliorent par rapport aux méthodes basiques.
-- **Détails** :
-  - Appliquer des techniques comme **Word2Vec**, **BERT**, **Universal Sentence Encoder (USE)**.
-  - Réduire la dimension des embeddings et visualiser les résultats pour comparer avec les catégories réelles.
-  - Comparer la performance des méthodes avancées avec celles des méthodes basiques.
-- **Livrable** : Un notebook comparant les résultats obtenus avec des méthodes avancées d'embedding et leurs visualisations.
-
-### Étape 3 : Étude de faisabilité en utilisant des techniques de traitement d'image basiques
-
-- **Objectif** : Analyser les images des produits à l’aide de techniques de transformation et d'extraction de features d'image simples.
-- **Détails** :
-  - Appliquer des transformations d'image simples comme la conversion en niveaux de gris, le filtrage de bruit, et le contraste.
-  - Utiliser des algorithmes d'extraction de features d'image comme **SIFT** ou **ORB**.
-  - Réduire la dimension des features extraites et comparer les résultats avec les catégories réelles.
-- **Livrable** : Un notebook détaillant les transformations d'images, l'extraction de features, et la réduction de dimension pour analyser la correspondance avec les catégories réelles.
-
-### Étape 4 : Étude de faisabilité avec des techniques de traitement d'image avancées
-
-- **Objectif** : Améliorer les résultats de classification en utilisant des modèles de **CNN Transfer Learning**.
-- **Détails** :
-  - Utiliser des modèles pré-entraînés comme **ResNet** ou **VGG** pour extraire des features d'image.
-  - Comparer les résultats obtenus avec ceux des méthodes basiques d'extraction de features d'image.
-  - Analyser la performance des modèles de **Transfer Learning** par rapport aux approches plus simples.
-- **Livrable** : Un notebook comparant les résultats des méthodes de **CNN Transfer Learning** avec celles des méthodes d'extraction de features basiques.
+Le projet est structuré en deux volets :
+1. Une **étude de faisabilité** utilisant des techniques de NLP et de vision par ordinateur pour explorer différentes méthodes de classification.
+2. Une phase de **mise en œuvre opérationnelle** incluant la classification supervisée par CNN et l’intégration d’une API pour l’extraction automatisée de données produit.
 
 ---
 
-## Deuxième Mission : Classification Supervisée et Test d'API
+## 🎯 Objectifs de la mission
 
-Après avoir prouvé la faisabilité de la classification automatique, je continue en mettant en place une classification supervisée pour les images des produits et un test d'API pour l'extraction de données de produits spécifiques.
-
-### Étape 1 : Classification supervisée d'images via CNN Transfer Learning
-
-- **Objectif** : Construire un modèle de classification supervisée pour prédire les catégories d'articles à partir d’images.
-- **Détails** :
-  - Utiliser un modèle de **CNN Transfer Learning** pour la classification des images.
-  - Mettre en place une **data augmentation** pour améliorer la performance du modèle sur des petits ensembles de données.
-  - Tester la performance du modèle avec des métriques comme l’accuracy et le **F1-score**.
-- **Livrable** : Un notebook contenant le modèle de classification supervisée des images avec les résultats d’évaluation.
-
-### Étape 2 : Test d'une API pour la collecte de données de produits
-
-- **Objectif** : Intégrer une API pour récupérer des informations sur des produits à base de "champagne".
-- **Détails** :
-  - Utiliser l'API fournie pour récupérer les informations sur les produits en envoyant des requêtes via Python.
-  - Extraire les données pertinentes (foodId, label, category, foodContentsLabel, image) et les enregistrer dans un fichier CSV.
-  - Vérifier l’intégrité des données et gérer les éventuelles erreurs lors des requêtes API.
-- **Livrable** : Un script ou notebook Python pour l’extraction des 10 premiers produits via l'API et génération du fichier CSV contenant les données.
-
-### Étape 3 : Préparation de la présentation finale
-
-- **Objectif** : Préparer une présentation structurée résumant l’ensemble des démarches, méthodes, et résultats obtenus.
-- **Détails** :
-  - Structurer la présentation autour des éléments suivants : problématique, jeu de données, prétraitements, extraction de features, résultats de classification, et test de l’API.
-  - Justifier les choix méthodologiques, les résultats obtenus, et les recommandations.
-  - Préparer une discussion autour des améliorations possibles et des axes futurs de recherche.
-- **Livrable** : Un PDF de 30 slides maximum résumant les principales conclusions du projet.
+- Automatiser la **classification des articles** en catégories à partir de données textuelles et visuelles
+- Comparer différentes **méthodes d’encodage et d’extraction de features**
+- Implémenter un **modèle supervisé d’image classification**
+- Tester une **API externe** pour enrichir les données produits
+- Fournir une **présentation métier** des résultats obtenus
 
 ---
 
-## Détails Techniques
+## 🧩 Étapes de réalisation
 
-- **Fichiers** :
-  - `Dataset des articles de Place de Marché` : Contient les images et descriptions des articles à classer.
-  - **Notebook de Classification Textuelle** : Contient les prétraitements, l’extraction des features textuelles, et les visualisations des résultats de classification basique et avancée.
-  - **Notebook de Classification d’Images** : Contient l’extraction des features d’image avec des méthodes basiques et avancées.
-  - **Notebook de Classification Supervisée** : Contient le modèle de classification supervisée d'images.
-  - **Script API** : Contient le code Python pour interagir avec l’API et extraire les données de produits à base de "champagne".
+### 📘 Première mission : étude de faisabilité
 
-- **Outils Utilisés** :
-  - **Python** (pandas, scikit-learn, TensorFlow, Keras) pour l'extraction des features, la classification, et l'API.
-  - **OpenCV** pour le traitement d'images et l'extraction des features d'image avec SIFT/ORB.
-  - **PCA**, **t-SNE** pour la réduction de dimension.
-  - **API requests** pour l'extraction des données via API.
+#### 1. NLP – Méthodes basiques
 
-- **Compétences Utilisées** :
-  - Traitement de texte et extraction des features avec Bag of Words, Tf-idf, et Word Embeddings.
-  - Classification d'images avec des méthodes basiques et avancées.
-  - Interaction avec une API pour l'extraction de données de produits.
-  - Présentation des résultats et justifications des approches méthodologiques.
+- Prétraitement des textes (stopwords, lemmatisation)
+- Encodage avec **Bag of Words** et **TF-IDF**
+- Réduction de dimension (**PCA**, **t-SNE**)
+- Visualisation des clusters par catégorie
 
-## Résumé
+#### 2. NLP – Méthodes avancées
 
-Ce projet consiste à développer une approche pour l’automatisation de la classification des articles sur une marketplace à partir de leurs images et descriptions textuelles. La première mission est dédiée à la faisabilité de la classification avec des méthodes basiques et avancées de traitement de texte et d’image. La seconde mission met en œuvre une classification supervisée à partir d’images et teste l’intégration d’une API pour extraire des données spécifiques de produits.
+- Embeddings avec **Word2Vec**, **BERT**, **USE**
+- Réduction de dimension et projection
+- Comparaison de la cohérence des clusters avec les catégories réelles
+
+#### 3. Computer Vision – Méthodes basiques
+
+- Prétraitement d’image : niveaux de gris, contraste, etc.
+- Extraction de features avec **SIFT**, **ORB** (OpenCV)
+- Clustering et réduction de dimension pour analyse visuelle
+
+#### 4. Computer Vision – Méthodes avancées
+
+- **Transfer Learning** avec **ResNet**, **VGG**
+- Extraction des embeddings visuels
+- Analyse de la pertinence des clusters formés par catégorie
+
+---
+
+### 📗 Deuxième mission : mise en œuvre opérationnelle
+
+#### 1. Classification supervisée d’images
+
+- Modèle de **CNN Transfer Learning**
+- **Data augmentation** pour généralisation
+- Évaluation par **accuracy** et **F1-score**
+
+#### 2. Intégration API produit
+
+- Appels API pour requêter des produits "champagne"
+- Récupération des champs : foodId, label, category, etc.
+- Enregistrement dans un fichier **CSV**
+
+#### 3. Présentation finale
+
+- Diaporama structuré : problématique, méthodologie, résultats
+- Comparaison des méthodes NLP et Vision
+- Recommandations stratégiques pour l’intégration future
+
+---
+
+## 📂 Livrables
+
+- **Notebook NLP Basique et Avancé**
+- **Notebook Computer Vision Basique et Avancé**
+- **Notebook CNN Classification Supervisée**
+- **Script d’intégration API**
+- **Présentation finale PDF (30 slides max)**
+
+---
+
+## 🛠️ Outils et technologies
+
+- **Python** (pandas, scikit-learn, TensorFlow, Keras)
+- **OpenCV** pour l’extraction d’attributs visuels
+- **NLP** : TF-IDF, Word2Vec, BERT, USE
+- **Modèles visuels pré-entraînés** : ResNet, VGG
+- **API Requests** pour l’appel d’API
+- Visualisation avec **matplotlib**, **seaborn**, **PCA**, **t-SNE**
+
+---
+
+## ✅ Résultats et impact
+
+- Comparaison rigoureuse entre méthodes basiques et avancées en NLP & Computer Vision
+- Prototype de modèle supervisé prêt à intégrer une **chaîne de traitement e-commerce**
+- Méthodologie reproductible pour enrichir la base de données produits
+- Recommandations concrètes pour automatiser la catégorisation produit
+
+---
+
+## 🔍 Aperçu
+
+> Ce projet démontre mes compétences en **NLP, Computer Vision, intégration API et classification supervisée**, dans un cas d’usage complet de **Data Science appliquée à l’e-commerce**.
+
+---
+
+*Projet réalisé dans un cadre professionnel simulé, avec des responsabilités comparables à celles d’un Data Scientist en startup tech e-commerce.*
